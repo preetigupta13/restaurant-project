@@ -1,0 +1,149 @@
+
+/* =========================
+   MY ORDERS PAGE
+========================= */
+
+.orders-page {
+  min-height: 100vh;
+  padding: 60px 8%;
+  background: #fafafa;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.orders-title {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.orders-title span {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+
+.orders-title h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  color: #222;
+}
+
+/* =========================
+   ORDERS LIST
+========================= */
+
+.orders-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* =========================
+   ORDER CARD
+========================= */
+
+.order-card {
+  background: white;
+  border-radius: 14px;
+  padding: 25px 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.order-card span {
+  display: block;
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 7px;
+}
+
+.order-card h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #222;
+}
+
+.order-card strong {
+  font-size: 18px;
+  color: #222;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.order-card div:last-child strong {
+  color: #e67e22;
+}
+
+/* =========================
+   NO ORDERS
+========================= */
+
+.no-orders {
+  max-width: 600px;
+  margin: 80px auto;
+  text-align: center;
+  background: white;
+  padding: 50px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.no-orders h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  color: #222;
+}
+
+.no-orders p {
+  margin: 0;
+  color: #777;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .orders-page {
+    padding: 40px 20px;
+  }
+
+  .orders-title h1 {
+    font-size: 32px;
+  }
+
+  .order-card {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 22px;
+  }
+
+}
+
