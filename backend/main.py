@@ -19,7 +19,7 @@ app = FastAPI(
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["https://restaurant-frontend-n08p.onrender.com"],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
