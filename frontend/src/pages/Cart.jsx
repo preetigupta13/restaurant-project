@@ -4,6 +4,8 @@ import { useCart } from "../context/CartContext";
 import "../styles/cart.css";
 import { useState } from "react";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Cart() {
 
   const {
@@ -44,7 +46,7 @@ function Cart() {
     };
     
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/orders/`, {
+    const response = await fetch(`${API_URL}/orders/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -2,6 +2,8 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
+const API_URL = import.meta.env.VITE_API_URL;
+
 function Login() {
   const navigate = useNavigate();
 
@@ -23,7 +25,7 @@ const handleLogin = async (e) => {
     formData.append("username", email.trim());
     formData.append("password", password);
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/auth/login`, {
+    const response = await fetch(`${API_URL}/auth/login`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -123,52 +125,3 @@ export default Login;
 
 
 
-// -------------------------------------------------
-// import { Link } from "react-router-dom";
-
-// function Login() {
-//   return (
-//     <main className="auth-page">
-
-//       <div className="auth-box">
-
-//         <h1>Welcome Back 👋</h1>
-
-//         <p>Login to continue ordering.</p>
-
-//         <form>
-
-//           <label>Email</label>
-
-//           <input
-//             type="email"
-//             placeholder="Enter your email"
-//           />
-
-//           <label>Password</label>
-
-//           <input
-//             type="password"
-//             placeholder="Enter your password"
-//           />
-
-//           <button type="submit">
-//             Login
-//           </button>
-
-//         </form>
-
-//         <p>
-//           Don't have an account?{" "}
-//           <Link to="/register">
-//             Register
-//           </Link>
-//         </p>
-
-//       </div>
-
-//     </main>
-//   );
-// }
-
-// export default Login;
