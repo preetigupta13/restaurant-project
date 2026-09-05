@@ -67,7 +67,7 @@ def create_order(db: Session, order: OrderCreate, user_id: int):
 
     # 1. Create order
     new_order = Order(
-        user_id=order.user_id,
+        user_id=user_id,
         total_amount=order.total_amount,
         status="Pending"
     )
