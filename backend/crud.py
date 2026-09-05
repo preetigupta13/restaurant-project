@@ -63,7 +63,7 @@ def get_user_by_email(db: Session, email: str):
 
 # ==================== ORDER ====================
 
-def create_order(db: Session, order: OrderCreate):
+def create_order(db: Session, order: OrderCreate, user_id: int):
 
     # 1. Create order
     new_order = Order(
